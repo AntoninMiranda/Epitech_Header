@@ -1,8 +1,7 @@
-
+local config = require('epitech_header.epitech_header.config')
 local framework = require('epitech_header.epitech_header.framework')
 
 local utils = {}
-local utils.conf_tab = {"name"={"jsp"}}
 
 function prepend_to_file(filename, content)
     local file = io.open(filename, "r+")
@@ -26,8 +25,7 @@ function utils.create()
     comment = framework.comments(filename)
     create_time = os.date("%d/%m/%Y %X")
     year = os.date("%Y")
-    head = comment[1] .. "\n" .. comment[2] .. " Epitech Project, " .. year .. "\n" .. comment[2] .. " " .. filename .. "\n" .. comment[2] .. " File description:\n" .. comment[2] .. " Author: " .. utils.conf_tab.name[1] .. "\n" .. comment[2] .. " Create: " .. create_time .. "\n" .. comment[3] .. "\n\n"
+    head = comment[1] .. "\n" .. comment[2] .. " Epitech Project, " .. year .. "\n" .. comment[2] .. " " .. filename .. "\n" .. comment[2] .. " File description:\n" .. comment[2] .. " Author: " .. config.name[1] .. "\n" .. comment[2] .. " Create: " .. create_time .. "\n" .. comment[3] .. "\n\n"
     prepend_to_file(filename, head)
 end
-
 return utils
