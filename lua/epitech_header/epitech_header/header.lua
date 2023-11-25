@@ -1,4 +1,5 @@
 local framework = require('epitech_header.epitech_header.framework')
+local conf = require('epitech_header.epitech_header.config')
 
 local utils = {}
 
@@ -17,8 +18,8 @@ function prepend_to_file(filename, content)
     end
 end
 
-function utils.create(config)
-    if config == nil then
+function utils.create()
+    if conf.config == nil then
         print("no config variable")
         do return end
     end
@@ -28,7 +29,7 @@ function utils.create(config)
     comment = framework.comments(filename)
     create_time = os.date("%d/%m/%Y %X")
     year = os.date("%Y")
-    head = comment[1] .. "\n" .. comment[2] .. " Epitech Project, " .. year .. "\n" .. comment[2] .. " " .. filename .. "\n" .. comment[2] .. " File description:\n" .. comment[2] .. " Author: " .. config.name[1] .. "\n" .. comment[2] .. " Create: " .. create_time .. "\n" .. comment[3] .. "\n\n"
+    head = comment[1] .. "\n" .. comment[2] .. " Epitech Project, " .. year .. "\n" .. comment[2] .. " " .. filename .. "\n" .. comment[2] .. " File description:\n" .. comment[2] .. " Author: " .. conf.config.name[1] .. "\n" .. comment[2] .. " Create: " .. create_time .. "\n" .. comment[3] .. "\n\n"
     prepend_to_file(filepath, head)
 end
 

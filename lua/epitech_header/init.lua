@@ -1,9 +1,10 @@
 local utils = require("epitech_header.epitech_header.header")
+local conf = require("epitech_header.epitech_header.config")
 
 local M = {}
-local M.conf = {name = {"Not set"}}
+
 function M.setup(config)
-    M.conf = config
+    conf.config = config
 end
 
 M.header = utils.create
