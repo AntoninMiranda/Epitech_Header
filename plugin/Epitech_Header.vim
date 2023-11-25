@@ -1,4 +1,3 @@
-
 if exists("g:header")
     finish
 endif
