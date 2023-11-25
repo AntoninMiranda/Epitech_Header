@@ -1,5 +1,4 @@
 local framework = require('epitech_header.epitech_header.framework')
-local conf = require('epitech_header.epitech_header.config')
 
 local utils = {}
 
