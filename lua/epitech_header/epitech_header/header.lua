@@ -2,7 +2,7 @@
 local framework = require('epitech_header.epitech_header.framework')
 
 local utils = {}
-local utils.conf_tab = {name={"jsp"}}
+local utils.conf_tab = {"name"={"jsp"}}
 
 function prepend_to_file(filename, content)
     local file = io.open(filename, "r+")
