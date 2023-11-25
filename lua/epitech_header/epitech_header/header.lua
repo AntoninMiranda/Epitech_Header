@@ -19,6 +19,7 @@ function prepend_to_file(filename, content)
 end
 
 function utils.create()
+    local name = vim.g.header_authors
     if conf.config == nil then
         print("no config variable")
         do return end
@@ -29,7 +30,7 @@ function utils.create()
     comment = framework.comments(filename)
     create_time = os.date("%d/%m/%Y %X")
     year = os.date("%Y")
-    head = comment[1] .. "\n" .. comment[2] .. " Epitech Project, " .. year .. "\n" .. comment[2] .. " " .. filename .. "\n" .. comment[2] .. " File description:\n" .. comment[2] .. " Author: " .. conf.config.name[1] .. "\n" .. comment[2] .. " Create: " .. create_time .. "\n" .. comment[3] .. "\n\n"
+    head = comment[1] .. "\n" .. comment[2] .. " Epitech Project, " .. year .. "\n" .. comment[2] .. " " .. filename .. "\n" .. comment[2] .. " File description:\n" .. comment[2] .. " Author: " .. name .. "\n" .. comment[2] .. " Create: " .. create_time .. "\n" .. comment[3] .. "\n\n"
     prepend_to_file(filepath, head)
 end
 
