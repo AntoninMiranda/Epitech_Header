@@ -6,6 +6,6 @@ function M.setup(config)
     conf = config
 end
 
-M.header = utils.create
+M.header = utils.create(conf)
 
 return M
