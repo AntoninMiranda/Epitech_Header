@@ -11,7 +11,7 @@ This is a epitech header module for respect epitech coding style
   use { 'AntoninMiranda/epitech_header.nvim' }
 ```
 
-### [lazy.nvim] (https://github.com/folke/lazy.nvim)
+### [lazy.nvim](https://github.com/folke/lazy.nvim)
 
 ```lua
   'AntoninMiranda/epitech_header.nvim',
