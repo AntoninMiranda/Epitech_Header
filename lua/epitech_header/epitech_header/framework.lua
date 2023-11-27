@@ -13,17 +13,17 @@ end
 
 function detect_extention(extention)
     local extentions = {
-        [{'js', "java", "c", "C", "cpp","CPP","HPP","h","hpp","H","go","cs","php","phtml","phps", "swift", "ts", "rs", "kt", "kts","scala", "d", "css"}] = {"/*","**", "*/"},
-        [{"py","sh", "r","nim","jl","rb","ex","exs","cr","ps1","psm1", "zig", "yaml", "conf"}] = {"##","##","##"},
+        [{'js', "java", "c", "C", "cpp", "CPP", "go", "cs", "php", "phtml", "phps", "swift", "ts", "rs", "kt", "kts", "scala", "d", "css"}] = {"/*", "**", "*/"},
+        [{"HPP", "h", "hpp", "H", "py", "sh", "r", "nim", "jl", "rb", "ex", "exs", "cr", "ps1", "psm1", "zig", "yaml", "conf"}] = {"##", "##", "##"},
         [{"lua", "hs"}] = {"--", "--", "--"},
-        [{"coffee"}] = {"///", "*", "///"},
+        [{"coffee"}] = {"///", "**", "///"},
         [{"vb"}] = {"\'"},
-        [{"clojure", "wat"}] = {";;", "*", ";;"},
+        [{"clojure", "wat"}] = {";;", "**", ";;"},
         [{"asm"}] = {";","*", ";"},
-        [{"html", "xml"}] = {"<!--", "-", "-->"},
-        [{"vim"}] = {"\"","*", "\""}
+        [{"html", "xml"}] = {"<!--", "--", "-->"},
+        [{"vim"}] = {"\"","**", "\""}
     }
-    for ext, comm  in pairs(extentions) do
+    for ext, comm in pairs(extentions) do
         for i = 1, #ext  do
             if ext[i] == extention then
                 return comm
