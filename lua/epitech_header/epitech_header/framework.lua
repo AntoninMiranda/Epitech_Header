@@ -54,4 +54,17 @@ function framework.get_file_name(filepath)
     return file[#file]
 end
 
+function framework.exist(filepath)
+    local file = io.open(filepath, "r")
+
+    if file then
+        file:close()
+    else
+        local create_file = io.open(filepath, "w")
+        if create_file then
+            create_file:close()
+        end
+    end
+end
+
 return framework
