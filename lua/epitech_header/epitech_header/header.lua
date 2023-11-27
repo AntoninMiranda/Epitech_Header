@@ -21,7 +21,7 @@ end
 function utils.create()
     -- filepath = "/home/nemo/test.c" -- to remove
     filepath = vim.api.nvim_buf_get_name(0)
-    vim.api.nvim_out_write(filepath)
+    vim.api.nvim_command("echo 'lolololo'")
     filename = framework.get_file_name(filepath)
     comment = framework.comments(filename)
     create_time = os.date("%d/%m/%Y %X")
