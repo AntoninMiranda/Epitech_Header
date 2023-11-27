@@ -1,0 +1,6 @@
+*
+!lua/
+!plugin/
+!LICENSE
+!README.md
+!.gitignore
