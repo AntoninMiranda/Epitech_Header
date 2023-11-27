@@ -19,7 +19,6 @@ function prepend_to_file(filename, content)
 end
 
 function utils.create()
-    -- filepath = "/home/nemo/test.c" -- to remove
     filepath = vim.api.nvim_buf_get_name(0)
     framework.exist(filepath)
     filename = framework.get_file_name(filepath)
