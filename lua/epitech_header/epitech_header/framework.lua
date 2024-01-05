@@ -15,7 +15,7 @@ function detect_extention(extention)
     local extentions = {
         [{'js', "java", "c", "C", "cpp", "CPP", "go", "cs", "php", "phtml", "phps", "swift", "ts", "rs", "kt", "kts", "scala", "d", "css"}] = {"/*", "**", "*/"},
         [{"HPP", "h", "hpp", "H", "py", "sh", "r", "nim", "jl", "rb", "ex", "exs", "cr", "ps1", "psm1", "zig", "yaml", "conf"}] = {"##", "##", "##"},
-        [{"lua", "hs"}] = {"--", "--", "--"},
+        [{"lua", "hs"}] = {"{-", "--", "-}"},
         [{"coffee"}] = {"///", "**", "///"},
         [{"vb"}] = {"\'"},
         [{"clojure", "wat"}] = {";;", "**", ";;"},
