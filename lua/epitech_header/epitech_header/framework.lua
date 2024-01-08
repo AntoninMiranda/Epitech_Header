@@ -36,6 +36,7 @@ end
 function framework.comments(filename)
     if filename == "Makefile" then
         return {"##", "##", "##"}
+    end
     file = framework.split(filename, ".")
     if file == nil then
     end
